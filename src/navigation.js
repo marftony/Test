@@ -3,23 +3,27 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Home',
       links: [
         {
           text: 'SaaS',
           href: getPermalink('/homes/saas'),
+          icon: "tabler:download"
         },
         {
           text: 'Startup',
           href: getPermalink('/homes/startup'),
+          icon: "tabler:download"
         },
         {
           text: 'Mobile App',
           href: getPermalink('/homes/mobile-app'),
+          icon: "tabler:download"
         },
         {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
+          icon: "tabler:download"
         },
       ],
     },
@@ -29,30 +33,37 @@ export const headerData = {
         {
           text: 'Features (Anchor Link)',
           href: getPermalink('/#features'),
+          icon: "tabler:download"
         },
         {
           text: 'Services',
           href: getPermalink('/services'),
+          icon: "tabler:download"
         },
         {
           text: 'Pricing',
           href: getPermalink('/pricing'),
+          icon: "tabler:download"
         },
         {
           text: 'About us',
           href: getPermalink('/about'),
+          icon: "tabler:download"
         },
         {
           text: 'Contact',
           href: getPermalink('/contact'),
+          icon: "tabler:download"
         },
         {
           text: 'Terms',
           href: getPermalink('/terms'),
+          icon: "tabler:download"
         },
         {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
+          icon: "tabler:download"
         },
       ],
     },
@@ -62,26 +73,32 @@ export const headerData = {
         {
           text: 'Lead Generation',
           href: getPermalink('/landing/lead-generation'),
+          icon: "tabler:download"
         },
         {
           text: 'Long-form Sales',
           href: getPermalink('/landing/sales'),
+          icon: "tabler:download"
         },
         {
           text: 'Click-Through',
           href: getPermalink('/landing/click-through'),
+          icon: "tabler:download"
         },
         {
           text: 'Product Details (or Services)',
           href: getPermalink('/landing/product'),
+          icon: "tabler:download"
         },
         {
           text: 'Coming Soon or Pre-Launch',
           href: getPermalink('/landing/pre-launch'),
+          icon: "tabler:download"
         },
         {
           text: 'Subscription',
           href: getPermalink('/landing/subscription'),
+          icon: "tabler:download"
         },
       ],
     },
@@ -91,31 +108,37 @@ export const headerData = {
         {
           text: 'Blog List',
           href: getBlogPermalink(),
+          icon: "tabler:download"
         },
         {
           text: 'Article',
           href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          icon: "tabler:download"
         },
         {
           text: 'Article (with MDX)',
           href: getPermalink('markdown-elements-demo-post', 'post'),
+          icon: "tabler:download"
         },
         {
           text: 'Category Page',
           href: getPermalink('tutorials', 'category'),
+          icon: "tabler:download"
         },
         {
           text: 'Tag Page',
           href: getPermalink('astro', 'tag'),
+          icon: "tabler:download"
         },
       ],
     },
     {
-      text: 'Widgets',
+      text: 'Case Studies',
       href: '#',
+      icon: "tabler:download"
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Sign In', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {

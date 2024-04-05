@@ -79,7 +79,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium"
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-semibold"
       >
         {
           links.map(({ text, href, links }) => (
@@ -89,18 +89,21 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
                   <button class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2 }) => (
-                      <li>
-                        <a
+                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded-3xl md:absolute pl-4 md:pl-0 md:hidden font-semibold md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                    {links.map(({ text: text2, href: href2, icon}) => (
+                      <li >
+                        <div style="padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 40px;">
+                        <a 
                           class:list={[
-                            "first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap",
+                            "first:rounded-xl flex items-center last:rounded-xl md:hover:bg-pink-50   hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-4 px-6 block whitespace-no-wrap rounded-md",
                             { "aw-link-active" : href2 === currentPath}
                           ]}
                           href={href2}
                         >
+                        {icon && <Icon name={icon} color="#FF69B4" class="w-5 h-5 mr-2" />}
                           {text2}
                         </a>
+                      </div>
                       </li>
                     ))}
                   </ul>
